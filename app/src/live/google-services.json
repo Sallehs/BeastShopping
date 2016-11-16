@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "343697001823",
+    "firebase_url": "https://beastshopping-1a03c.firebaseio.com",
+    "project_id": "beastshopping-1a03c",
+    "storage_bucket": "beastshopping-1a03c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343697001823:android:e236364dd3a885ab",
+        "android_client_info": {
+          "package_name": "com.limesightcom.beastshopping.live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343697001823-vjfv4cnqlaqpkag11bu9qacu4kjbo550.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.limesightcom.beastshopping.live",
+            "certificate_hash": "90B75205FEDF7059CBB31D6C6284270FFC8B97A1"
+          }
+        },
+        {
+          "client_id": "343697001823-n5hle6ggkr0pp9mvfhs54otmk2bcfcg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1YPIi20wgpSsxnKu_MDCdCRrLHjkBNIo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343697001823-n5hle6ggkr0pp9mvfhs54otmk2bcfcg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
