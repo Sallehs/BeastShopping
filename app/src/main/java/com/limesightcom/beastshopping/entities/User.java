@@ -10,16 +10,16 @@ import java.util.Objects;
 public class User {
     private String email;
     private String name;
-    private HashMap<String, Objects> dateJoined;
+    private HashMap<String, Object> timeJoined;
     private boolean hasLoggedInWithPassword;
 
     public User() {
     }
 
-    public User(String email, String name, HashMap<String, Objects> dateJoined, boolean hasLoggedInWithPassword) {
+    public User(String email, String name, HashMap<String, Object> timeJoined, boolean hasLoggedInWithPassword) {
         this.email = email;
         this.name = name;
-        this.dateJoined = dateJoined;
+        this.timeJoined = timeJoined;
         this.hasLoggedInWithPassword = hasLoggedInWithPassword;
     }
 
@@ -31,8 +31,8 @@ public class User {
         return name;
     }
 
-    public HashMap<String, Objects> getDateJoined() {
-        return dateJoined;
+    public HashMap<String, Object> getTimeJoined() {
+        return timeJoined;
     }
 
     public boolean isHasLoggedInWithPassword() {

@@ -1,6 +1,7 @@
 package com.limesightcom.beastshopping.services;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 
 import com.limesightcom.beastshopping.infrastructure.ServiceResponse;
 
@@ -28,6 +29,24 @@ public class AccountServices {
     }
 
     public static class RegisterUserResponse extends ServiceResponse{
+
+    }
+
+    public static class LogUserInRequest {
+        public String userEmail;
+        public String userPassword;
+        public ProgressDialog mProgressDialog;
+        public SharedPreferences mSharedPreferences;
+
+        public LogUserInRequest(String userEmail, String userPassword, ProgressDialog progressDialog, SharedPreferences sharedPreferences) {
+            this.userEmail = userEmail;
+            this.userPassword = userPassword;
+            mProgressDialog = progressDialog;
+            mSharedPreferences = sharedPreferences;
+        }
+    }
+
+    public static class LogUserInResponse extends ServiceResponse {
 
     }
 }
