@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/list_shopping_list_relativelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/list_shopping_list_listname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Shopping List name"/>
+
+    <TextView
+        android:id="@+id/list_shopping_list_createdby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created by:"
+        android:textSize="12sp"
+        android:layout_below="@id/list_shopping_list_listname"/>
+
+    <TextView
+        android:id="@+id/list_shopping_list_ownername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ali"
+        android:textSize="12sp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/list_shopping_list_listname"
+        android:layout_toRightOf="@id/list_shopping_list_createdby"/>
+    
+    <TextView
+        android:id="@+id/list_shopping_list_datecreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12/3/4"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/list_shopping_list_listname"/>
+
+</RelativeLayout>

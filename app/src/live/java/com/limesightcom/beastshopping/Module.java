@@ -10,5 +10,6 @@ public class Module {
 
     public static void Register(BeastShoppingApplication application) {
         new LiveAccountServices(application);
+        new LiveShoppingListService(application);
     }
 }
