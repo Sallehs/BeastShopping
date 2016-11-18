@@ -32,9 +32,9 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.activity_main_FAB)
     FloatingActionButton mFloatingActionButton;
 
-//    RecyclerView mRecyclerView;
-//
-//    FirebaseRecyclerAdapter adapter;
+    RecyclerView mRecyclerView;
+
+    FirebaseRecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        mRecyclerView = (RecyclerView) findViewById(R.id.activity_main_list_recyclerview);
+        mRecyclerView = (RecyclerView) findViewById(R.id.activity_main_list_recyclerview);
 
         String toolBarName;
 
@@ -56,37 +56,39 @@ public class MainActivity extends BaseActivity {
     }
 
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        Firebase shoppingListReference = new Firebase(Utils.FIREBASE_SHOPPING_LIST_REFERENCE + userEmail);
-//
-//        adapter = new FirebaseRecyclerAdapter<ShoppingList, ShoppingListViewHolder>(ShoppingList.class,
-//                R.layout.list_shopping_list,
-//                ShoppingListViewHolder.class,
-//                shoppingListReference) {
-//            @Override
-//            protected void populateViewHolder(ShoppingListViewHolder shoppingListViewHolder,
-//                                              final ShoppingList shoppingList,
-//                                              int i) {
-//                shoppingListViewHolder.populate(shoppingList);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Firebase shoppingListReference = new Firebase(Utils.FIREBASE_SHOPPING_LIST_REFERENCE + userEmail);
+
+
+        // !!!! FirebaseRecyclerAdapter!!! normal RecyclerView needs OnBindViewHolder
+        adapter = new FirebaseRecyclerAdapter<ShoppingList, ShoppingListViewHolder>(ShoppingList.class,
+                R.layout.list_shopping_list,
+                ShoppingListViewHolder.class,
+                shoppingListReference) {
+            @Override
+            protected void populateViewHolder(ShoppingListViewHolder shoppingListViewHolder,
+                                              final ShoppingList shoppingList,
+                                              int i) {
+                shoppingListViewHolder.populate(shoppingList);
 //                shoppingListViewHolder.layout.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
 //                        Toast.makeText(getApplicationContext(), shoppingList.getListName() + "was clicked", Toast.LENGTH_LONG).show();
 //                    }
 //                });
-//            }
-//        };
-//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        mRecyclerView.setAdapter(adapter);
-//    }
+            }
+        };
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(adapter);
+    }
 
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        adapter.cleanup();
-//    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        adapter.cleanup();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
