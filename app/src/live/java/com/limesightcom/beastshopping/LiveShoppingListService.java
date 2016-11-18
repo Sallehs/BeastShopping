@@ -17,6 +17,8 @@ import java.util.HashMap;
  * Created by Syahrizal1 on 17/11/2016.
  */
 
+// Handles Shopping list creation and lifecycle
+
 public class LiveShoppingListService extends BaseLiveService {
     public LiveShoppingListService(BeastShoppingApplication application) {
         super(application);

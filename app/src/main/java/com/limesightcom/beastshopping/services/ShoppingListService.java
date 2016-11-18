@@ -6,9 +6,11 @@ import com.limesightcom.beastshopping.infrastructure.ServiceResponse;
  * Created by Syahrizal1 on 17/11/2016.
  */
 
+// Model
+
 public class ShoppingListService {
 
-    public ShoppingListService() {
+    private ShoppingListService() {
     }
 
     public static class AddShoppingListRequest {

@@ -8,6 +8,8 @@ import java.util.HashMap;
  * Created by Syahrizal1 on 17/11/2016.
  */
 
+// Model
+
 public class ShoppingList {
     private String id;
     private String listName;
@@ -26,6 +28,7 @@ public class ShoppingList {
         this.ownerName = ownerName;
         this.dateCreated = dateCreated;
 
+        // date is auto created using ServerValue
         HashMap<String , Object> dateLastChangedObject = new HashMap<>();
         dateLastChangedObject.put("date", ServerValue.TIMESTAMP);
 

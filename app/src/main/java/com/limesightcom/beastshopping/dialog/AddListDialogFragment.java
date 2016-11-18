@@ -19,6 +19,8 @@ import butterknife.ButterKnife;
  * Created by Syahrizal1 on 17/11/2016.
  */
 
+// Dialog to create new shopping list
+
 public class AddListDialogFragment extends BaseDialog implements View.OnClickListener{
 
     @BindView(R.id.dialog_add_list_editText)

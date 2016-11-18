@@ -11,6 +11,8 @@ import java.security.Policy;
  * Created by Syahrizal1 on 16/11/2016.
  */
 
+// Model
+
 public class AccountServices {
 
     private AccountServices() {
